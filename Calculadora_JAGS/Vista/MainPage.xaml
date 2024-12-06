@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora_JAGS.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calculadora" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Numero 1" Padding="20"/>
+            <Entry Placeholder="" Keyboard="Numeric" BindingContext="{Binding Num1}"  />
+
+       
+            <Label Text="Numero 2" Padding="20"/>
+            <Entry Placeholder="" Keyboard="Numeric" BindingContext="{Binding Num2}" />
+            
+            
+        </StackLayout>
+
+        <StackLayout Padding="20">
+            <Label Text="Seleccione el tipo de operacion" Padding="50"/>
+
+            <Button Text="Suma" Command="{Binding ProcesoSuma}" />
+            <Button Text="Resta"  Command="{Binding ProcesoResta}"/>
+            <Button Text="Multiplicacion" Command="{Binding ProcesoMultiplicacion}"/>
+            <Button Text="Division"  Command="{Binding ProcesoDividir}"/>
+
+        </StackLayout>
+
+
+        <StackLayout>
+            <Label Text="{Binding Respuesta}" IsEnabled="False" TextColor="Black" HorizontalOptions="Center" FontSize="Medium"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
